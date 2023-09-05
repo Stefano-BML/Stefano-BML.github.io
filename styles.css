@@ -1,0 +1,78 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://i.imgur.com/hqW2k8Q.jpg'); /* Reemplaza con la URL de tu imagen */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #AB1D8C;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 50px;
+}
+
+.container::before {
+    content: ''; /* Contenido vacío para el círculo */
+    width: 100px; /* Tamaño del círculo */
+    height: 100px; /* Tamaño del círculo */
+    background-color: #007bff; /* Color de fondo del círculo */
+    border-radius: 50%; /* Hacer que el círculo sea redondo */
+    position: absolute; /* Posición absoluta para colocar el círculo */
+    top: -50px; /* Ajustar la posición vertical del círculo encima del título */
+    left: 50%; /* Centrar horizontalmente el círculo */
+    transform: translateX(-50%); /* Centrar horizontalmente el círculo */
+    z-index: 1; /* Colocar el círculo encima del contenido */
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.link {
+    padding: 15px 90px;
+    background-color: #FF999A;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.link:hover {
+    background-color: #FFDCDD;
+}
+
+h1 {
+    color: #fff; /* Hacer que el texto del h1 sea blanco */
+    position: relative; /* Posición relativa para ajustar el z-index */
+    z-index: 2; /* Colocar el título encima del círculo */
+}
+
+/* Estilos responsivos para dispositivos móviles */
+@media (max-width: 768px) {
+    body {
+        background-image: url('https://i.imgur.com/OmXQAJU.jpg'); /* Fondo para dispositivos móviles */
+    }
+    .container {
+        width: 70%;
+        padding: 85px 20px; /* Aumentar el espacio en la parte superior e inferior y reducir los costados */
+        background-color: #7AAEDD;
+    }
+    .link {
+        padding: 15px 90px;
+        background-color: #0986D2;
+    }
+
+
+}
